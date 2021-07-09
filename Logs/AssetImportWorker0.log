@@ -1,0 +1,132 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.8f1 (507919d4fff5) revision 5273881'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home; OS build 19043.1083; Version 2009; 64bit' Language: 'en' Physical Memory: 32717 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+D:\2020.3.8f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/Flori/unity/PetGame
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+60777
+Successfully changed project path to: C:/Users/Flori/unity/PetGame
+C:/Users/Flori/unity/PetGame
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 53.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.8f1 (507919d4fff5)
+[Subsystems] Discovering subsystems at path D:/2020.3.8f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Flori/unity/PetGame/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 2070 SUPER (ID=0x1e84)
+    Vendor:   
+    VRAM:     8011 MB
+    Driver:   27.21.14.5671
+Initialize mono
+Mono path[0] = 'D:/2020.3.8f1/Editor/Data/Managed'
+Mono path[1] = 'D:/2020.3.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'D:/2020.3.8f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56384
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/2020.3.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001264 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 55.74 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.118 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001793 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 53.56 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.131 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.67 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2485 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 117.3 MB.
+System memory in use after: 114.7 MB.
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 2904.
+Total: 3.648100 ms (FindLiveObjects: 0.288300 ms CreateObjectMapping: 0.067800 ms MarkObjects: 1.922200 ms  DeleteObjects: 1.368300 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Scripts/Pets/PetScriptableObject.cs
+  artifactKey: Guid(c2e6c2f9e64758d489583643d10e2ecc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Pets/PetScriptableObject.cs using Guid(c2e6c2f9e64758d489583643d10e2ecc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f387d7ab20004412a5839472d8e4178') in 0.056222 seconds
+  Import took 0.060357 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000204 seconds.
+  path: Assets/Scripts/Pets/GrowthRequirement.cs
+  artifactKey: Guid(240bde8667754c0468eb0e90ab928ef1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Pets/GrowthRequirement.cs using Guid(240bde8667754c0468eb0e90ab928ef1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37810b42f25f39ac7460e3b866556ba1') in 0.007386 seconds
+  Import took 0.010833 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000232 seconds.
+  path: Assets/Scripts/Pets/GrowthTransition.cs
+  artifactKey: Guid(f7012c1daf5b9f8408ac329ad1438718) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Pets/GrowthTransition.cs using Guid(f7012c1daf5b9f8408ac329ad1438718) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad43f71dd8c4cc034df6f4cd2815e8f1') in 0.007382 seconds
+  Import took 0.011933 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000248 seconds.
+  path: Assets/Scripts/Pets/GrowthStage.cs
+  artifactKey: Guid(2e43bf14a093c2441a981d9789c200f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Pets/GrowthStage.cs using Guid(2e43bf14a093c2441a981d9789c200f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f09bbe1e20fbaf132b204b804b9407bc') in 0.006717 seconds
+  Import took 0.011354 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 265.398539 seconds.
+  path: Assets/Editor/Editors/PetSOEditor.cs
+  artifactKey: Guid(5bcab2d1e3af3174f9061e6b16b2cb1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Editor/Editors/PetSOEditor.cs using Guid(5bcab2d1e3af3174f9061e6b16b2cb1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e105e0c8fa0233e79afc393115d03b2') in 0.009988 seconds
+  Import took 0.015116 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003439 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.45 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.358 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2385 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 111.5 MB.
+System memory in use after: 109.0 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 2907.
+Total: 3.754600 ms (FindLiveObjects: 0.260300 ms CreateObjectMapping: 0.074600 ms MarkObjects: 1.989400 ms  DeleteObjects: 1.428900 ms)
+

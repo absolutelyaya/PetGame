@@ -1,0 +1,162 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2e6c2f9e64758d489583643d10e2ecc, type: 3}
+  m_Name: Spider
+  m_EditorClassIdentifier: 
+  Stages:
+  - ID: bcd49d3a-ae84-4df1-93ca-e43fdad8d6e0
+    Display:
+      serializedVersion: 2
+      x: 713
+      y: 39.5
+      width: 27
+      height: 21
+    Depth: 0
+    Icon: {fileID: -5305227545120213008, guid: c478159f0fe22644b8949081256170c6, type: 3}
+    Animator: {fileID: 0}
+    Transitions:
+    - ID: b9089d70-2b64-4cfe-870d-68e31629dc01
+      Destination: c40cf37e-5594-48aa-b52f-ff2c331d14a6
+      Requirements:
+      - Type: 0
+        MinAge: -1
+    - ID: 90375a5b-d585-47ec-8442-278d2f47f890
+      Destination: 754794ae-1a8b-4622-95e0-c5d929dcfbe8
+      Requirements:
+      - Type: 0
+        MinAge: -1
+  - ID: c40cf37e-5594-48aa-b52f-ff2c331d14a6
+    Display:
+      serializedVersion: 2
+      x: 578.5
+      y: 185
+      width: 45
+      height: 30
+    Depth: 1
+    Icon: {fileID: 8669654342258829549, guid: c478159f0fe22644b8949081256170c6, type: 3}
+    Animator: {fileID: 0}
+    Transitions:
+    - ID: a7496547-e400-44d4-87fb-ae7da7c7523d
+      Destination: 0171131e-b703-400c-b6b7-8fc2f7c21300
+      Requirements:
+      - Type: 0
+        MinAge: -1
+  - ID: 754794ae-1a8b-4622-95e0-c5d929dcfbe8
+    Display:
+      serializedVersion: 2
+      x: 828
+      y: 186.5
+      width: 48
+      height: 27
+    Depth: 1
+    Icon: {fileID: 8876084119658816378, guid: c478159f0fe22644b8949081256170c6, type: 3}
+    Animator: {fileID: 0}
+    Transitions:
+    - ID: 79ab9842-2ba7-48d7-9366-1c793869a781
+      Destination: b2696046-b4d2-400d-b9fc-35640795d917
+      Requirements:
+      - Type: 0
+        MinAge: -1
+  - ID: 0171131e-b703-400c-b6b7-8fc2f7c21300
+    Display:
+      serializedVersion: 2
+      x: 575.5
+      y: 327.5
+      width: 51
+      height: 45
+    Depth: 2
+    Icon: {fileID: 6656190683464554393, guid: c478159f0fe22644b8949081256170c6, type: 3}
+    Animator: {fileID: 0}
+    Transitions:
+    - ID: 088d8dda-ae4e-4d18-92dc-e390048154a3
+      Destination: 457a24ee-54be-4070-8d30-a3d68c233386
+      Requirements:
+      - Type: 0
+        MinAge: -1
+  - ID: b2696046-b4d2-400d-b9fc-35640795d917
+    Display:
+      serializedVersion: 2
+      x: -38.333336
+      y: 332
+      width: 78
+      height: 36
+    Depth: 2
+    Icon: {fileID: -6806879476830253712, guid: c478159f0fe22644b8949081256170c6, type: 3}
+    Animator: {fileID: 0}
+    Transitions:
+    - ID: 5506d975-12b4-4be3-a09b-ea3f1b36c8e5
+      Destination: 829bb076-eed2-41e3-a827-7149d4cf36f3
+      Requirements:
+      - Type: 0
+        MinAge: -1
+    - ID: 80dcc3a4-c9e8-449d-9478-bafc95d12847
+      Destination: d3558b34-6fe4-4f40-9c9f-035212f0a507
+      Requirements:
+      - Type: 0
+        MinAge: -1
+  - ID: 457a24ee-54be-4070-8d30-a3d68c233386
+    Display:
+      serializedVersion: 2
+      x: 562
+      y: 471.5
+      width: 78
+      height: 57
+    Depth: 3
+    Icon: {fileID: -8975250943914533070, guid: c478159f0fe22644b8949081256170c6, type: 3}
+    Animator: {fileID: 0}
+    Transitions: []
+  - ID: 829bb076-eed2-41e3-a827-7149d4cf36f3
+    Display:
+      serializedVersion: 2
+      x: -34.000004
+      y: 462.5
+      width: 69
+      height: 75
+    Depth: 3
+    Icon: {fileID: 3664522731063425514, guid: c478159f0fe22644b8949081256170c6, type: 3}
+    Animator: {fileID: 0}
+    Transitions: []
+  - ID: d3558b34-6fe4-4f40-9c9f-035212f0a507
+    Display:
+      serializedVersion: 2
+      x: -49.166668
+      y: 494
+      width: 100
+      height: 32
+    Depth: 3
+    Icon: {fileID: 0}
+    Animator: {fileID: 0}
+    Transitions: []
+  InitialStage:
+    ID: bcd49d3a-ae84-4df1-93ca-e43fdad8d6e0
+    Display:
+      serializedVersion: 2
+      x: 713
+      y: 39.5
+      width: 27
+      height: 21
+    Depth: 0
+    Icon: {fileID: -5305227545120213008, guid: c478159f0fe22644b8949081256170c6, type: 3}
+    Animator: {fileID: 0}
+    Transitions:
+    - ID: b9089d70-2b64-4cfe-870d-68e31629dc01
+      Destination: c40cf37e-5594-48aa-b52f-ff2c331d14a6
+      Requirements:
+      - Type: 0
+        MinAge: 30
+    - ID: 90375a5b-d585-47ec-8442-278d2f47f890
+      Destination: 754794ae-1a8b-4622-95e0-c5d929dcfbe8
+      Requirements:
+      - Type: 0
+        MinAge: 30
+      - Type: 1
+        MinAge: -1
