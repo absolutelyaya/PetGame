@@ -62,7 +62,7 @@ public class EvolutionEditor : EditorWindow
             DrawTreeChildren(1, growthTree.InitialStage, treeRect);
         }
         EditorGUI.DrawRect(new Rect(treeRect.x, 0, treeRect.width, 26), new Color(33 / 255f, 30 / 255f, 36 / 255f));
-        GUI.Box(new Rect(treeRect.x, 0, treeRect.width, 26), "Evolution Tree", 
+        GUI.Box(new Rect(treeRect.x, 0, treeRect.width, 26), $"Evolution Tree ({(growthTree != null ? growthTree.name : "none")})", 
             new GUIStyle(GUI.skin.box) { fontStyle = FontStyle.Bold, stretchWidth = true, alignment = TextAnchor.MiddleCenter });
         treeRect.y += 20; treeRect.height -= 20;
         scrollBarPos = GUILayout.VerticalScrollbar(scrollBarPos, 100, 0, 1000, GUILayout.ExpandHeight(true));
