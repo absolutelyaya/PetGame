@@ -10,5 +10,5 @@ public class AdoptionPlaceSO : ScriptableObject
     [HideInInspector]
     public Sprite Preview;
     [HideInInspector]
-    public Texture2D ButtonTexture;
+    public Sprite ButtonSprite;
 }

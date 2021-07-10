@@ -10,6 +10,8 @@ public class AdoptionPlaceEditor : EditorWindow
     float ScrollPosition;
     float ScrollBarMax;
     GUIStyle invisibutton;
+    int eggAnimStep = 0;
+    float lastFrameTime = 0;
 
     [MenuItem("Window/Adoption Place Editor")]
     public static void ShowWindow()
@@ -59,13 +61,13 @@ public class AdoptionPlaceEditor : EditorWindow
             EditorGUILayout.BeginHorizontal(new GUIStyle(GUI.skin.box));
             EditorGUILayout.Space(EditorGUIUtility.labelWidth + EditorGUIUtility.fieldWidth, true);
             r = GUILayoutUtility.GetLastRect();
-            if ((Texture)so.FindProperty(nameof(AdoptionPlaceSO.ButtonTexture)).objectReferenceValue != null)
+            if ((Sprite)so.FindProperty(nameof(AdoptionPlaceSO.ButtonSprite)).objectReferenceValue != null)
             {
-                GUI.DrawTexture(r, (Texture)so.FindProperty(nameof(AdoptionPlaceSO.ButtonTexture)).objectReferenceValue, ScaleMode.ScaleToFit, true, 
+                GUI.DrawTexture(r, ((Sprite)so.FindProperty(nameof(AdoptionPlaceSO.ButtonSprite)).objectReferenceValue).texture, ScaleMode.ScaleToFit, true, 
                     0, new Color(1, 1, 1, 0.25f), 0, 0);
             }
             EditorGUI.PropertyField(new Rect(r.x + r.width / 4, r.y + r.height / 2 - EditorGUIUtility.singleLineHeight / 2, r.width - r.width / 4 * 2, 
-                EditorGUIUtility.singleLineHeight), so.FindProperty(nameof(AdoptionPlaceSO.ButtonTexture)), new GUIContent());
+                EditorGUIUtility.singleLineHeight), so.FindProperty(nameof(AdoptionPlaceSO.ButtonSprite)), new GUIContent());
             EditorGUI.LabelField(r, new GUIContent("<color=white>Button Texture</color>"), 
                 new GUIStyle() { alignment = TextAnchor.UpperCenter, fontStyle = FontStyle.Bold, fontSize = 18 });
             EditorGUILayout.EndHorizontal();
@@ -104,7 +106,7 @@ public class AdoptionPlaceEditor : EditorWindow
                             EditorGUI.DrawRect(new Rect(r.x + r.width, r.y + 1, 1, r.height - 1), selColor);
                             EditorGUI.DrawRect(new Rect(r.x + 1, r.y + r.height, r.width - 1, 1), selColor);
                         }
-                        var sprite = egg.Phases[0].Sprite;
+                        var sprite = egg.Phases[eggAnimStep % egg.Phases.Count].Sprite;
                         float aspect = sprite.rect.width / sprite.rect.height;
                         GUI.DrawTextureWithTexCoords(new Rect(r.x + (r.width - r.width / 10 * 9), r.y,
                             r.width / 10 * 9 * aspect + (r.width - r.width / 10 * 9), r.width / 10 * 9 + (r.width - r.width / 10 * 9)),
@@ -168,6 +170,16 @@ public class AdoptionPlaceEditor : EditorWindow
             EditorGUILayout.EndVertical();
         }
 
+    }
+
+    private void Update()
+    {
+        if (lastFrameTime + 1f < Time.realtimeSinceStartup)
+        {
+            lastFrameTime = Time.realtimeSinceStartup;
+            eggAnimStep++;
+            Repaint();
+        }
     }
 
     void RemoveEgg(EggSO egg)
