@@ -28,9 +28,6 @@ public class AdoptionPlaceEditor : EditorWindow
 
     private void OnGUI()
     {
-        if (Selection.objects.Length > 0 && Selection.objects[0] is AdoptionPlaceSO selection)
-            place = selection;
-
         if (place != null)
         {
             SerializedObject so = new SerializedObject(place);
@@ -174,6 +171,12 @@ public class AdoptionPlaceEditor : EditorWindow
 
     private void Update()
     {
+        if (Selection.objects.Length > 0 && Selection.objects[0] is AdoptionPlaceSO selection && selection != place)
+        {
+            place = selection;
+            Repaint();
+        }
+
         if (lastFrameTime + 1f < Time.realtimeSinceStartup)
         {
             lastFrameTime = Time.realtimeSinceStartup;
