@@ -1,0 +1,29 @@
+ManifestFileVersion: 0
+CRC: 958885599
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: e40cbeea5b0bfa9868a2cdb5dadded00
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5f68d02612eaa8ee22cb8f260f8de555
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 51ef096f79e3e104881e337bca107878, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 12de584dfaf1e4d49a48284b87ab7328, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Sprites/AlleyAdoptionPlace.png
+- Assets/Sprites/ForestButton.png
+- Assets/ScriptableObjects/Back Alley.asset
+- Assets/ScriptableObjects/Forest.asset
+- Assets/Sprites/AlleyButton.png
+Dependencies: []
