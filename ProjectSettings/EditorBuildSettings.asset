@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HatchingGrounds.unity
     guid: d1c3109bdb54ad54c8a2b2838528e640
+  - enabled: 1
+    path: Assets/Scenes/AdoptionPlaceMenu.unity
+    guid: 244eeee1b144e004e9dc0dcda310a5d7
+  - enabled: 1
+    path: Assets/Scenes/EggSelection.unity
+    guid: 000e5f223106f164abb5db68fbc42c3c
   m_configObjects: {}
