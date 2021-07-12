@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EggSelection.unity
     guid: 000e5f223106f164abb5db68fbc42c3c
+  - enabled: 1
+    path: Assets/Scenes/Keyboard.unity
+    guid: a8c128d7da6f94443824e5b605fef348
   m_configObjects: {}
