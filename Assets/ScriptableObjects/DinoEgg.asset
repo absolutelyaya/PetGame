@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51ef096f79e3e104881e337bca107878, type: 3}
   m_Name: DinoEgg
   m_EditorClassIdentifier: 
+  RetrievalText: Found in an ancient Nest underground.
+  Description: "It's quite heavy, but looks promising!\u32A1\u32A1\u2611"
   Phases:
   - Duration: 0.25
     Sprite: {fileID: -5537255269043591051, guid: 2deca1d21e11ee641a221a9e9a81ae01, type: 3}
@@ -33,3 +35,4 @@ MonoBehaviour:
     Sprite: {fileID: 7666651630473822363, guid: 2deca1d21e11ee641a221a9e9a81ae01, type: 3}
     WiggleAmount: 6.5
     WiggleSpeed: 5
+  Tags: 

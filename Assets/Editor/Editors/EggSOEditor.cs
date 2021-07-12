@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-[CustomEditor(typeof(EggScriptableObject))]
+[CustomEditor(typeof(EggSO))]
 public class EggSOEditor : Editor
 {
-    EggScriptableObject egg;
+    //EggSO egg;
 
-    private void OnEnable()
-    {
-        egg = (EggScriptableObject)target;
-    }
+    //private void OnEnable()
+    //{
+    //    egg = (EggSO)target;
+    //}
 
     public override void OnInspectorGUI()
     {

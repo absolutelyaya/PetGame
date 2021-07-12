@@ -23,6 +23,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: ddad3bcb9f8040b419b017ff1e6d4962, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -35,7 +39,9 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    m_Floats: []
+    m_Floats:
+    - Vector1_2ccae88615d541bcbea29fce8ef156e6: -1
+    - _Visibility: -1
     m_Colors:
     - Color_19b3c6c0039144219ec16057905577fd: {r: 0.17647055, g: 0.10588237, b: 0, a: 0}
   m_BuildTextureStacks: []

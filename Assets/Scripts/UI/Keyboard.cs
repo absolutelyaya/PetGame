@@ -1,18 +1,27 @@
-﻿using System.Collections;
+﻿using UnityEngine.SceneManagement;
 using System.Collections.Generic;
+using System.Collections;
 using System.Text;
 using UnityEngine;
+using System;
 using TMPro;
 
 public class Keyboard : MonoBehaviour
 {
+    public static Keyboard Reference;
+
     public TextMeshProUGUI Output;
     public int MaxLength;
+    public event Action<string> ConfirmEvent;
 
     int curChar;
 
     private void Start()
     {
+        if (Reference)
+            Destroy(gameObject);
+        else
+            Reference = this;
         Output.text = new string('_', MaxLength);
     }
 
@@ -58,8 +67,11 @@ public class Keyboard : MonoBehaviour
 
     void Confirm()
     {
-        string output = Output.text.Replace('_', '\0');
-        if(output.Length > 0)
-            Debug.Log(output);
+        string output = Output.text.TrimEnd('_');
+        if (output.Length > 0)
+        {
+            ConfirmEvent?.Invoke(output);
+            SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName("Keyboard"));
+        }
     }
 }

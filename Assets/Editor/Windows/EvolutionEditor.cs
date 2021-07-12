@@ -10,7 +10,7 @@ public class EvolutionEditor : EditorWindow
     Vector2 infoPos;
     Vector2 treePos;
     GUIStyle invisibutton;
-    PetScriptableObject growthTree;
+    PetSO growthTree;
     [SerializeField]
     GrowthStage selectedStage = null;
     [SerializeField]
@@ -30,8 +30,8 @@ public class EvolutionEditor : EditorWindow
 
     private void OnGUI()
     {
-        if (Selection.objects.Length > 0 && Selection.objects[0].GetType() == typeof(PetScriptableObject))
-            growthTree = (PetScriptableObject)Selection.objects[0];
+        if (Selection.objects.Length > 0 && Selection.objects[0] is PetSO selection)
+            growthTree = selection;
 
         if(growthTree != null)
             if (growthTree.Stages == null || growthTree.Stages.Count == 0)
@@ -142,7 +142,7 @@ public class EvolutionEditor : EditorWindow
     {
         Rect ArrowRect = new Rect(x: b.x + b.width / 2, y: a.y + a.height + 5, width: a.x - b.x - b.width / 2 + a.width / 2 + 2, height: Mathf.Abs(a.y - b.y) - a.height - 10);
         Texture2D Arrow = new Texture2D((int)Mathf.Abs(ArrowRect.width), (int)Mathf.Abs(ArrowRect.height), TextureFormat.RGBA32, false);
-        Color[] pixels = new Color[(int)Mathf.Abs(ArrowRect.width) * (int)Mathf.Abs(ArrowRect.height)];
+        Color32[] pixels = new Color32[(int)Mathf.Abs(ArrowRect.width) * (int)Mathf.Abs(ArrowRect.height)];
 
         Color selectedCol = new Color(58 / 255f, 121 / 255f, 187 / 255f);
         Color bgCol = new Color(70 / 255f, 60 / 255f, 60 / 255f, 0f);
@@ -156,7 +156,7 @@ public class EvolutionEditor : EditorWindow
             else
                 pixels[i] = bgCol;
         }
-        Arrow.SetPixels(pixels);
+        Arrow.SetPixels32(pixels);
         Arrow.Apply(false);
         GUI.DrawTexture(ArrowRect, Arrow);
         if (GUI.Button(new Rect(ArrowRect.x + ( ArrowRect.width < 0 ? ArrowRect.width : -10), ArrowRect.y, Mathf.Abs(ArrowRect.width) + 20, ArrowRect.height), 

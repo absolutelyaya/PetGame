@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Egg : MonoBehaviour
 {
-    public EggScriptableObject EggData;
+    public EggSO EggData;
 
     public EggPhase phaseData;
     public float phaseTime = 0f;
