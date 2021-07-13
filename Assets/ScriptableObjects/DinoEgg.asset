@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: DinoEgg
   m_EditorClassIdentifier: 
   RetrievalText: Found in an ancient Nest underground.
-  Description: "It's quite heavy, but looks promising!\u32A1\u32A1\u2611"
+  Description: "It's quite heavy, but looks promising!\u32A1\u32A1\u2611[name|Name
+    your Pet!]"
   Phases:
   - Duration: 0.25
     Sprite: {fileID: -5537255269043591051, guid: 2deca1d21e11ee641a221a9e9a81ae01, type: 3}

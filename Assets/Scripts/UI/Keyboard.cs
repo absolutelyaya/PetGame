@@ -10,11 +10,13 @@ public class Keyboard : MonoBehaviour
 {
     public static Keyboard Reference;
 
+    public TextMeshProUGUI Question;
     public TextMeshProUGUI Output;
     public int MaxLength;
     public event Action<string> ConfirmEvent;
 
     int curChar;
+    string key;
 
     private void Start()
     {
@@ -70,8 +72,16 @@ public class Keyboard : MonoBehaviour
         string output = Output.text.TrimEnd('_');
         if (output.Length > 0)
         {
-            ConfirmEvent?.Invoke(output);
+            ConfirmEvent?.Invoke(key + "|" + output);
             SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName("Keyboard"));
         }
+    }
+
+    public void SetQuestion(string question)
+    {
+        Question.text = string.Empty;
+        var tt = new TextTyper(Question, 16, true);
+        key = question.Split('|')[0];
+        tt.SetText(question.Split('|')[1] + '\u23F9');
     }
 }

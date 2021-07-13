@@ -1,5 +1,4 @@
-﻿using UnityEngine.SceneManagement;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
 using TMPro;
@@ -16,11 +15,12 @@ public class EggSelectionMenu : MonoBehaviour
     [Tooltip("Chars per second")]
     public float TypeSpeed = 4;
 
-    string infoText = string.Empty;
+    TextTyper infotextTT;
 
     private void Start()
     {
-        StartCoroutine(UpdateInfoText());
+        infotextTT = new TextTyper(InfoText, 20, OnFinishSequence, OnKeyboardOutput);
+
         if(AdoptionPlaceMenu.Reference != null)
             Place = AdoptionPlaceMenu.Reference.GetAdoptionPlace();
 
@@ -39,7 +39,7 @@ public class EggSelectionMenu : MonoBehaviour
 
     public void UpdateInfoText(string text)
     {
-        infoText = text;
+        infotextTT.SetText(text);
     }
 
     public void HideOtherEgg(SelectableEgg egg)
@@ -55,79 +55,23 @@ public class EggSelectionMenu : MonoBehaviour
         StartCoroutine(DeleteTitle());
     }
 
-    IEnumerator UpdateInfoText()
+    void OnKeyboardOutput(string output)
     {
-        bool finished = false;
-        string curTask = string.Empty;
-        bool UpdatePending = false;
-        while (!finished)
+        string[] args = output.Split('|');
+        switch (args[0])
         {
-            yield return new WaitForEndOfFrame();
-            if(curTask != infoText)
-            {
-                UpdatePending = true;
-                curTask = infoText;
-            }
-            if(curTask == string.Empty && InfoText.text.Length > 0 && UpdatePending)
-            {
-                while (InfoText.text.Length > 0)
-                {
-                    yield return new WaitForSeconds(1 / (TypeSpeed * 2));
-                    if(InfoText.text.EndsWith("<br>"))
-                        InfoText.text = InfoText.text.Substring(0, InfoText.text.Length - 4);
-                    else
-                        InfoText.text = InfoText.text.Substring(0, InfoText.text.Length - 1);
-                }
-                UpdatePending = false;
-            }
-            else if(UpdatePending)
-            {
-                foreach (var c in curTask)
-                {
-                    yield return new WaitForSeconds(1 / TypeSpeed);
-                    switch(c)
-                    {
-                        case '☑':
-                            StartCoroutine(NamingRoutine());
-                            break;
-                        case '⏹':
-                            finished = true;
-                            break;
-                        case '∛':
-                            InfoText.text += "<br>";
-                            break;
-                        case '㊡':
-                            yield return new WaitForSeconds(1f);
-                            break;
-                        case '.':
-                            InfoText.text += c;
-                            yield return new WaitForSeconds(0.2f);
-                            break;
-                        default:
-                            InfoText.text += c;
-                            break;
-                    }
-                    if (infoText == string.Empty)
-                        break;
-                }
-                UpdatePending = false;
-            }
+            case "name":
+                infotextTT.SetText("Great!㊡∛Time to welcome " + args[1] + " into your home.㊡㊡⏹");
+                break;
+            default:
+                Debug.Log(output);
+                break;
         }
-        Debug.Log("Transition to breeding grounds");
     }
 
-    IEnumerator NamingRoutine()
+    void OnFinishSequence()
     {
-        yield return SceneManager.LoadSceneAsync("Keyboard", LoadSceneMode.Additive);
-        while (!Keyboard.Reference)
-            yield return new WaitForEndOfFrame();
-        Keyboard.Reference.ConfirmEvent += ConfirmName;
-        infoText = string.Empty;
-    }
-
-    void ConfirmName(string name)
-    {
-        infoText = "Great!㊡∛Time to welcome " + name + " into your home.㊡㊡⏹";
+        Debug.Log("Load Hatching Grounds");
     }
 
     IEnumerator DeleteTitle()

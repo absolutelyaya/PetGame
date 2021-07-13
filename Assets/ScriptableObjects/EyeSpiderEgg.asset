@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: EyeSpiderEgg
   m_EditorClassIdentifier: 
   RetrievalText: "Found sticking to a wall \u221Bof an abandoned eye clinic."
-  Description: "It's wiggling... \u221BIt moves more the closer you get.\u32A1\u32A1\u2611"
+  Description: "It's wiggling... \u221BIt moves more the closer you get.\u32A1\u32A1\u2611[name|Name
+    your Pet!]"
   Phases:
   - Duration: 0.1
     Sprite: {fileID: 21300000, guid: ddad3bcb9f8040b419b017ff1e6d4962, type: 3}
