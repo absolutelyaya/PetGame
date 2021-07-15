@@ -13,7 +13,14 @@ public class Egg : MonoBehaviour
 
     private void Start()
     {
+        if(GameManager.Reference.data.OwnedEgg)
+        {
+            EggData = GameManager.Reference.data.OwnedEgg;
+            phaseTime = GameManager.Reference.data.HatchingSince.GetSecondsSince();
+        }
+
         sprite = GetComponent<SpriteRenderer>();
+        sprite.sprite = EggData.Phases[phase].Sprite;
         phaseData = EggData.Phases[phase];
     }
 
@@ -32,8 +39,9 @@ public class Egg : MonoBehaviour
 
     void Upgrade()
     {
+        if(phase < EggData.Phases.Count)
+            phaseTime -= EggData.Phases[phase].Duration;
         phase++;
-        phaseTime = 0f;
         if (phase > EggData.Phases.Count)
         {
             Debug.Log("Hatch!");

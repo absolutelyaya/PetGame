@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
+using System;
 using TMPro;
 
 [DefaultExecutionOrder(-1)]
@@ -28,7 +30,7 @@ public class EggSelectionMenu : MonoBehaviour
         List<int> picks = new List<int>();
         while(picks.Count < 2)
         {
-            int r = Random.Range(0, Place.EggPool.Count);
+            int r = UnityEngine.Random.Range(0, Place.EggPool.Count);
             if (!picks.Contains(r) || rolls > 5)
                 picks.Add(r);
             rolls++;
@@ -62,6 +64,10 @@ public class EggSelectionMenu : MonoBehaviour
         {
             case "name":
                 infotextTT.SetText("Great!㊡∛Time to welcome " + args[1] + " into your home.㊡㊡⏹");
+                GameManager.Reference.data.EggName = args[1];
+                GameManager.Reference.data.OwnedEgg = Choice.Egg;
+                GameManager.Reference.data.PreviouslyOwnedEggs.Add(Choice.Egg);
+                GameManager.Reference.data.HatchingSince.dateTime = DateTime.Now;
                 break;
             default:
                 Debug.Log(output);
@@ -71,7 +77,7 @@ public class EggSelectionMenu : MonoBehaviour
 
     void OnFinishSequence()
     {
-        Debug.Log("Load Hatching Grounds");
+        SceneManager.LoadScene("HatchingGrounds");
     }
 
     IEnumerator DeleteTitle()
