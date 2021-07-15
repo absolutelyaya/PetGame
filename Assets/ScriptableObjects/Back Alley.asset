@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EggPool:
   - {fileID: 11400000, guid: 528a17ec64286e84dbd8c019f8a25081, type: 2}
+  - {fileID: 11400000, guid: cb9a43b8e57f0f24c94f0eb2a3bfa6e5, type: 2}
   Preview: {fileID: 21300000, guid: b5e4d50d354ec7d4ca29d29a3d824f3d, type: 3}
   ButtonSprite: {fileID: 21300000, guid: 7665abe5abfa49c4bbfe4078d290cd9f, type: 3}

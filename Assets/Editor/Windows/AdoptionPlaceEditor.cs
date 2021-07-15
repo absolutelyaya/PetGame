@@ -33,6 +33,7 @@ public class AdoptionPlaceEditor : EditorWindow
             SerializedObject so = new SerializedObject(place);
             so.Update();
 
+            EditorGUI.BeginChangeCheck();
             EditorGUILayout.BeginVertical();
             EditorGUILayout.BeginVertical(new GUIStyle(GUI.skin.box) { stretchWidth = true });
             EditorGUILayout.LabelField(new GUIContent($"<color=white>Editing <b>{place.name}</b></color>"),
@@ -69,6 +70,8 @@ public class AdoptionPlaceEditor : EditorWindow
                 new GUIStyle() { alignment = TextAnchor.UpperCenter, fontStyle = FontStyle.Bold, fontSize = 18 });
             EditorGUILayout.EndHorizontal();
             EditorGUILayout.EndHorizontal();
+            if(EditorGUI.EndChangeCheck())
+                EditorUtility.SetDirty(place);
 
             EditorGUILayout.BeginVertical(new GUIStyle(GUI.skin.box) { stretchWidth = true, stretchHeight = true, clipping = TextClipping.Clip });
             EditorGUILayout.LabelField(new GUIContent("<color=white>Egg Pool</color>"),
@@ -130,7 +133,7 @@ public class AdoptionPlaceEditor : EditorWindow
                 RemoveEgg(selectedEgg);
             EditorGUI.EndDisabledGroup();
 
-            ScrollPosition = GUILayout.VerticalScrollbar(ScrollPosition, 3, 0, ScrollBarMax, new GUIStyle(GUI.skin.verticalScrollbar) { stretchHeight = true });
+            ScrollPosition = GUILayout.VerticalScrollbar(ScrollPosition, Mathf.Min(ScrollBarMax, 3), 0, ScrollBarMax, new GUIStyle(GUI.skin.verticalScrollbar) { stretchHeight = true });
             EditorGUILayout.EndHorizontal();
             EditorGUILayout.EndVertical();
             EditorGUILayout.EndVertical();
@@ -150,6 +153,7 @@ public class AdoptionPlaceEditor : EditorWindow
                         {
                             if (egg is EggSO eggSO && !place.EggPool.Contains(eggSO))
                                 place.EggPool.Add(eggSO);
+                            EditorUtility.SetDirty(place);
                         }
                     }
                     break;
@@ -158,6 +162,7 @@ public class AdoptionPlaceEditor : EditorWindow
             }
 
             so.ApplyModifiedProperties();
+            AssetDatabase.SaveAssets();
         }
         else
         {
