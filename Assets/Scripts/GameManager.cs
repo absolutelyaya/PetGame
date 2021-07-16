@@ -18,6 +18,12 @@ public class GameManager : MonoBehaviour
         {
             Reference = this;
             DontDestroyOnLoad(gameObject);
+            data = SaveSystem.TryLoadData();
         }
+    }
+
+    private void OnApplicationQuit()
+    {
+        SaveSystem.SaveData(data);
     }
 }
