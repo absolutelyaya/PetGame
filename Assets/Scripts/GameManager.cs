@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
             data = SaveSystem.LoadData();
             FetchScriptableObjects();
+            //LoadModSOs
             if (data.OwnedEggID != null && data.OwnedEggID.Length > 0)
                 OwnedEgg = (EggSO)GetSOByName<EggSO>(data.OwnedEggID);
             if (data.OwnedPetID != null && data.OwnedPetID.Length > 0)
@@ -81,5 +82,15 @@ public class GameManager : MonoBehaviour
                 break;
         }
         throw new Exception($"Scriptable Object of type {typeof(Type)} named {name} not found!");
+    }
+
+    public bool WasPreviouslyOwned(string name)
+    {
+        foreach (var egg in PreviouslyOwnedEggs)
+        {
+            if (egg.name == name)
+                return true;
+        }
+        return false;
     }
 }

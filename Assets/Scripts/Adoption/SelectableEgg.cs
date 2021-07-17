@@ -17,6 +17,8 @@ public class SelectableEgg : MonoBehaviour
         if (Egg)
             render.sprite = Egg.Phases[0].Sprite;
         DesiredPos = transform.localPosition;
+        if (GameManager.Reference.WasPreviouslyOwned(Egg.name))
+            render.sharedMaterial.SetFloat("_Visibility", 4f);
     }
 
     private void Update()
@@ -57,13 +59,18 @@ public class SelectableEgg : MonoBehaviour
     IEnumerator Reveal()
     {
         Owner.UpdateInfoText(string.Empty);
-        float time = -1.25f;
-        while(time < 4)
+        if (render.sharedMaterial.GetFloat("_Visibility") < 4f)
         {
-            yield return new WaitForEndOfFrame();
-            time += Time.deltaTime;
-            render.sharedMaterial.SetFloat("_Visibility", time);
+            float time = -1.25f;
+            while (time < 4)
+            {
+                yield return new WaitForEndOfFrame();
+                time += Time.deltaTime;
+                render.sharedMaterial.SetFloat("_Visibility", time);
+            }
         }
+        else
+            yield return new WaitForSeconds(0.2f);
         Owner.UpdateInfoText(Egg.Description);
     }
 }
