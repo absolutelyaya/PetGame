@@ -65,8 +65,9 @@ public class EggSelectionMenu : MonoBehaviour
             case "name":
                 infotextTT.SetText("Great!㊡∛Time to welcome " + args[1] + " into your home.㊡㊡⏹");
                 GameManager.Reference.data.EggName = args[1];
-                GameManager.Reference.data.OwnedEgg = Choice.Egg;
-                GameManager.Reference.data.PreviouslyOwnedEggs.Add(Choice.Egg);
+                GameManager.Reference.OwnedEgg = Choice.Egg;
+                GameManager.Reference.data.OwnedEggID = Choice.Egg.name;
+                GameManager.Reference.data.PreviouslyOwnedEggIDs.Add(Choice.Egg.name);
                 GameManager.Reference.data.HatchingSince.dateTime = DateTime.Now;
                 break;
             default:

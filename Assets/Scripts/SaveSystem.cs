@@ -13,13 +13,16 @@ public static class SaveSystem
             Directory.CreateDirectory(Application.persistentDataPath + "/PlayerData");
 
         File.WriteAllText(saveFilePath, JsonUtility.ToJson(data, true));
-        Debug.Log($"PlayerData Saved to {saveFilePath}");
+        //Debug.Log($"PlayerData Saved to {saveFilePath}");
     }
 
-    public static PlayerData TryLoadData()
+    public static PlayerData LoadData()
     {
         if (File.Exists(saveFilePath))
+        {
+            //Debug.Log($"Loading Data from {saveFilePath}");
             return JsonUtility.FromJson<PlayerData>(File.ReadAllText(saveFilePath));
+        }
         return new PlayerData();
     }
 }

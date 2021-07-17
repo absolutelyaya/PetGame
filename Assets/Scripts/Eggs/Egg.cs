@@ -13,9 +13,9 @@ public class Egg : MonoBehaviour
 
     private void Start()
     {
-        if(GameManager.Reference.data.OwnedEgg)
+        if(GameManager.Reference.OwnedEgg)
         {
-            EggData = GameManager.Reference.data.OwnedEgg;
+            EggData = GameManager.Reference.OwnedEgg;
             phaseTime = GameManager.Reference.data.HatchingSince.GetSecondsSince();
         }
 
@@ -40,7 +40,7 @@ public class Egg : MonoBehaviour
     void Upgrade()
     {
         if(phase < EggData.Phases.Count)
-            phaseTime -= EggData.Phases[phase].Duration;
+        phaseTime -= EggData.Phases[phase].Duration;
         phase++;
         if (phase > EggData.Phases.Count)
         {
