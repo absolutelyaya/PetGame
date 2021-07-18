@@ -34,6 +34,9 @@ MonoBehaviour:
       Requirements:
       - Type: 0
         MinAge: -1
+    DefaultStats:
+      Speed: 0
+      MoveInterval: {x: 0, y: 0}
   - ID: c40cf37e-5594-48aa-b52f-ff2c331d14a6
     Display:
       serializedVersion: 2
@@ -50,6 +53,9 @@ MonoBehaviour:
       Requirements:
       - Type: 0
         MinAge: 60
+    DefaultStats:
+      Speed: 6
+      MoveInterval: {x: 1.5, y: 3}
   - ID: 754794ae-1a8b-4622-95e0-c5d929dcfbe8
     Display:
       serializedVersion: 2
@@ -66,6 +72,9 @@ MonoBehaviour:
       Requirements:
       - Type: 0
         MinAge: 60
+    DefaultStats:
+      Speed: 6
+      MoveInterval: {x: 1.5, y: 3}
   - ID: 0171131e-b703-400c-b6b7-8fc2f7c21300
     Display:
       serializedVersion: 2
@@ -82,6 +91,9 @@ MonoBehaviour:
       Requirements:
       - Type: 0
         MinAge: 120
+    DefaultStats:
+      Speed: 6
+      MoveInterval: {x: 1.5, y: 3}
   - ID: b2696046-b4d2-400d-b9fc-35640795d917
     Display:
       serializedVersion: 2
@@ -98,6 +110,9 @@ MonoBehaviour:
       Requirements:
       - Type: 0
         MinAge: 120
+    DefaultStats:
+      Speed: 6
+      MoveInterval: {x: 1.5, y: 3}
   - ID: 457a24ee-54be-4070-8d30-a3d68c233386
     Display:
       serializedVersion: 2
@@ -109,6 +124,9 @@ MonoBehaviour:
     Icon: {fileID: -8975250943914533070, guid: c478159f0fe22644b8949081256170c6, type: 3}
     Animator: {fileID: 0}
     Transitions: []
+    DefaultStats:
+      Speed: 6
+      MoveInterval: {x: 1.5, y: 3}
   - ID: 829bb076-eed2-41e3-a827-7149d4cf36f3
     Display:
       serializedVersion: 2
@@ -120,6 +138,9 @@ MonoBehaviour:
     Icon: {fileID: 3664522731063425514, guid: c478159f0fe22644b8949081256170c6, type: 3}
     Animator: {fileID: 0}
     Transitions: []
+    DefaultStats:
+      Speed: 6
+      MoveInterval: {x: 1.5, y: 3}
   InitialStage:
     ID: bcd49d3a-ae84-4df1-93ca-e43fdad8d6e0
     Display:
@@ -144,3 +165,6 @@ MonoBehaviour:
         MinAge: 30
       - Type: 1
         MinAge: -1
+    DefaultStats:
+      Speed: 6
+      MoveInterval: {x: 1.5, y: 3}

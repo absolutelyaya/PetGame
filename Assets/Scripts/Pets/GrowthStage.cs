@@ -14,6 +14,7 @@ public class GrowthStage
     public Sprite Icon;
     public Animator Animator;
     public List<GrowthTransition> Transitions = new List<GrowthTransition>();
+    public PetStats DefaultStats;
 
     public GrowthStage()
     {

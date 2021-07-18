@@ -183,6 +183,7 @@ public class EvolutionEditor : EditorWindow
         EditorGUILayout.PropertyField(stage.FindPropertyRelative(nameof(GrowthStage.Icon)), new GUIContent("Icon"),
             GUILayout.Height(EditorGUIUtility.singleLineHeight));
         EditorGUILayout.PropertyField(stage.FindPropertyRelative(nameof(GrowthStage.Animator)), new GUIContent("Animator"));
+        EditorGUILayout.PropertyField(stage.FindPropertyRelative(nameof(GrowthStage.DefaultStats)), new GUIContent("Defualt Stats"));
 
         GUILayout.BeginHorizontal();
         if (GUILayout.Button("Create Transition"))
