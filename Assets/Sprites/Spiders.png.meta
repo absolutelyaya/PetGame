@@ -23,6 +23,36 @@ TextureImporter:
   - first:
       213: 3664522731063425514
     second: Spiders_6
+  - first:
+      213: -8145321424125516464
+    second: Spiders_7
+  - first:
+      213: 8764687087610870830
+    second: Spiders_8
+  - first:
+      213: 8636045336481829144
+    second: Spiders_9
+  - first:
+      213: -4845351430045128624
+    second: Spiders_10
+  - first:
+      213: -5283313398917490035
+    second: Spiders_11
+  - first:
+      213: 1583443367682650448
+    second: Spiders_12
+  - first:
+      213: -2405367483577754573
+    second: Spiders_13
+  - first:
+      213: -3077354290352938081
+    second: Spiders_14
+  - first:
+      213: -3230956779907878653
+    second: Spiders_15
+  - first:
+      213: 2866757215423835996
+    second: Spiders_16
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -151,8 +181,8 @@ TextureImporter:
       name: Spiders_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 27
+        x: 11
+        y: 104
         width: 9
         height: 7
       alignment: 0
@@ -172,10 +202,10 @@ TextureImporter:
       name: Spiders_1
       rect:
         serializedVersion: 2
-        x: 13
-        y: 12
-        width: 15
-        height: 10
+        x: 42
+        y: 104
+        width: 10
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,10 +223,10 @@ TextureImporter:
       name: Spiders_2
       rect:
         serializedVersion: 2
-        x: 31
-        y: 12
-        width: 17
-        height: 15
+        x: 75
+        y: 104
+        width: 10
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,10 +244,10 @@ TextureImporter:
       name: Spiders_3
       rect:
         serializedVersion: 2
-        x: 51
-        y: 12
-        width: 26
-        height: 19
+        x: 8
+        y: 93
+        width: 16
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,10 +265,10 @@ TextureImporter:
       name: Spiders_4
       rect:
         serializedVersion: 2
-        x: 12
-        y: 32
-        width: 16
-        height: 9
+        x: 39
+        y: 93
+        width: 17
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -256,10 +286,10 @@ TextureImporter:
       name: Spiders_5
       rect:
         serializedVersion: 2
-        x: 31
-        y: 32
-        width: 26
-        height: 12
+        x: 72
+        y: 93
+        width: 17
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -277,10 +307,10 @@ TextureImporter:
       name: Spiders_6
       rect:
         serializedVersion: 2
-        x: 60
-        y: 32
-        width: 23
-        height: 25
+        x: 104
+        y: 93
+        width: 16
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -290,6 +320,216 @@ TextureImporter:
       bones: []
       spriteID: ae9316822000bd230800000000000000
       internalID: 3664522731063425514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spiders_7
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 80
+        width: 26
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 055ae9d025106fe80800000000000000
+      internalID: -8145321424125516464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spiders_8
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 80
+        width: 27
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2cbf78087c62a970800000000000000
+      internalID: 8764687087610870830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spiders_9
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 80
+        width: 27
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8111b215a7569d770800000000000000
+      internalID: 8636045336481829144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spiders_10
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 80
+        width: 26
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 058aa30db8ad1ccb0800000000000000
+      internalID: -4845351430045128624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spiders_11
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 80
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8a1674b476eda6b0800000000000000
+      internalID: -5283313398917490035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spiders_12
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 80
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0513cac7a5589f510800000000000000
+      internalID: 1583443367682650448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spiders_13
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 53
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33c9213940b6e9ed0800000000000000
+      internalID: -2405367483577754573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spiders_14
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 41
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f932d73d39a0b45d0800000000000000
+      internalID: -3077354290352938081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spiders_15
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 24
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30173f05de55923d0800000000000000
+      internalID: -3230956779907878653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spiders_16
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 3
+        width: 26
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5f20aaaf74c8c720800000000000000
+      internalID: 2866757215423835996
       vertices: []
       indices: 
       edges: []
