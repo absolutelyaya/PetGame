@@ -40,13 +40,13 @@ MonoBehaviour:
   - ID: c40cf37e-5594-48aa-b52f-ff2c331d14a6
     Display:
       serializedVersion: 2
-      x: -22.166666
-      y: 185
-      width: 45
-      height: 30
+      x: 607.6667
+      y: 186.5
+      width: 48
+      height: 27
     Depth: 1
-    Icon: {fileID: 8669654342258829549, guid: c478159f0fe22644b8949081256170c6, type: 3}
-    Animator: {fileID: 0}
+    Icon: {fileID: -8975250943914533070, guid: c478159f0fe22644b8949081256170c6, type: 3}
+    Animator: {fileID: 9100000, guid: 05d302722dd91104d9acef7d855cc8cb, type: 2}
     Transitions:
     - ID: a7496547-e400-44d4-87fb-ae7da7c7523d
       Destination: 0171131e-b703-400c-b6b7-8fc2f7c21300
@@ -59,12 +59,12 @@ MonoBehaviour:
   - ID: 754794ae-1a8b-4622-95e0-c5d929dcfbe8
     Display:
       serializedVersion: 2
-      x: -23.333334
-      y: 186.5
-      width: 48
-      height: 27
+      x: -21.833334
+      y: 185
+      width: 45
+      height: 30
     Depth: 1
-    Icon: {fileID: 8876084119658816378, guid: c478159f0fe22644b8949081256170c6, type: 3}
+    Icon: {fileID: -3077354290352938081, guid: c478159f0fe22644b8949081256170c6, type: 3}
     Animator: {fileID: 0}
     Transitions:
     - ID: 79ab9842-2ba7-48d7-9366-1c793869a781
@@ -78,13 +78,13 @@ MonoBehaviour:
   - ID: 0171131e-b703-400c-b6b7-8fc2f7c21300
     Display:
       serializedVersion: 2
-      x: -25.166666
-      y: 327.5
-      width: 51
-      height: 45
+      x: -38.666664
+      y: 332
+      width: 78
+      height: 36
     Depth: 2
-    Icon: {fileID: 6656190683464554393, guid: c478159f0fe22644b8949081256170c6, type: 3}
-    Animator: {fileID: 0}
+    Icon: {fileID: -8145321424125516464, guid: c478159f0fe22644b8949081256170c6, type: 3}
+    Animator: {fileID: 9100000, guid: 365eb32bc9a3c88458e4b5ff22d1508b, type: 2}
     Transitions:
     - ID: 088d8dda-ae4e-4d18-92dc-e390048154a3
       Destination: 457a24ee-54be-4070-8d30-a3d68c233386
@@ -92,17 +92,17 @@ MonoBehaviour:
       - Type: 0
         MinAge: 120
     DefaultStats:
-      Speed: 6
-      MoveInterval: {x: 1.5, y: 3}
+      Speed: 1
+      MoveInterval: {x: 4.5, y: 6}
   - ID: b2696046-b4d2-400d-b9fc-35640795d917
     Display:
       serializedVersion: 2
-      x: -38.333336
-      y: 332
-      width: 78
-      height: 36
+      x: -24.833334
+      y: 327.5
+      width: 51
+      height: 45
     Depth: 2
-    Icon: {fileID: -6806879476830253712, guid: c478159f0fe22644b8949081256170c6, type: 3}
+    Icon: {fileID: -3230956779907878653, guid: c478159f0fe22644b8949081256170c6, type: 3}
     Animator: {fileID: 0}
     Transitions:
     - ID: 5506d975-12b4-4be3-a09b-ea3f1b36c8e5
@@ -116,12 +116,12 @@ MonoBehaviour:
   - ID: 457a24ee-54be-4070-8d30-a3d68c233386
     Display:
       serializedVersion: 2
-      x: -38.666664
-      y: 471.5
-      width: 78
-      height: 57
+      x: -34.166664
+      y: 462.5
+      width: 69
+      height: 75
     Depth: 3
-    Icon: {fileID: -8975250943914533070, guid: c478159f0fe22644b8949081256170c6, type: 3}
+    Icon: {fileID: -2405367483577754573, guid: c478159f0fe22644b8949081256170c6, type: 3}
     Animator: {fileID: 0}
     Transitions: []
     DefaultStats:
@@ -130,12 +130,12 @@ MonoBehaviour:
   - ID: 829bb076-eed2-41e3-a827-7149d4cf36f3
     Display:
       serializedVersion: 2
-      x: -33.833336
-      y: 462.5
-      width: 69
-      height: 75
+      x: -38.333336
+      y: 471.5
+      width: 78
+      height: 57
     Depth: 3
-    Icon: {fileID: 3664522731063425514, guid: c478159f0fe22644b8949081256170c6, type: 3}
+    Icon: {fileID: 2866757215423835996, guid: c478159f0fe22644b8949081256170c6, type: 3}
     Animator: {fileID: 0}
     Transitions: []
     DefaultStats:
@@ -145,7 +145,7 @@ MonoBehaviour:
     ID: bcd49d3a-ae84-4df1-93ca-e43fdad8d6e0
     Display:
       serializedVersion: 2
-      x: -13
+      x: 759
       y: 39.5
       width: 27
       height: 21

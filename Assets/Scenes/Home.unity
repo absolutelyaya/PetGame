@@ -649,6 +649,7 @@ GameObject:
   - component: {fileID: 1569207098}
   - component: {fileID: 1569207099}
   - component: {fileID: 1569207100}
+  - component: {fileID: 1569207101}
   m_Layer: 0
   m_Name: PetEntity
   m_TagString: Untagged
@@ -711,7 +712,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6806879476830253712, guid: c478159f0fe22644b8949081256170c6, type: 3}
+  m_Sprite: {fileID: 8636045336481829144, guid: c478159f0fe22644b8949081256170c6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -734,11 +735,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68cbb57e53cde714685defe786f180c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EvolutionTree: {fileID: 0}
-  PhaseID: 
+  EvolutionTree: {fileID: 11400000, guid: 86a858b70b90a7d4ea43946c16e94778, type: 2}
+  StageID: 0171131e-b703-400c-b6b7-8fc2f7c21300
   Stats:
     Speed: 6
     MoveInterval: {x: 1.5, y: 3}
+--- !u!95 &1569207101
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569207097}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1642949731
 GameObject:
   m_ObjectHideFlags: 0

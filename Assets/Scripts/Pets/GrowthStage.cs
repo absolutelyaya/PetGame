@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor.Animations;
 using System;
 
 [Serializable]
@@ -12,7 +13,7 @@ public class GrowthStage
     [HideInInspector]
     public int Depth;
     public Sprite Icon;
-    public Animator Animator;
+    public AnimatorController Animator;
     public List<GrowthTransition> Transitions = new List<GrowthTransition>();
     public PetStats DefaultStats;
 
