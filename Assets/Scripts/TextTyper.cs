@@ -14,8 +14,7 @@ public class TextTyper
     string curText = string.Empty;
     bool finished = false;
     bool canceled = false;
-
-    readonly bool forceUppercase = false;
+    
     readonly int typeSpeed;
     readonly TextMeshProUGUI target;
 
@@ -44,32 +43,6 @@ public class TextTyper
     }
 
     /// <summary>
-    /// Creates a new TextTyper.
-    /// </summary>
-    /// <param name="_target">The target TextMeshProUGUI.</param>
-    /// <param name="_typeSpeed">How quick to type (Chars per Second).</param>
-    /// <param name="_forceUppercase">Force Written text to be Uppercase.</param>
-    /// <param name="_onFinishExecution">Will Fire when a ⏹ is reached in the input text (The TextTyper will also stop Updating the target.).</param>
-    /// <param name="_keyboardCallback">Will fire when KeyboardInput is submitted.</param>
-    public TextTyper(TextMeshProUGUI _target, int _typeSpeed, bool _forceUppercase, Action _onFinishExecution = null, Action<string> _keyboardCallback = null)
-    {
-        target = _target;
-        typeSpeed = _typeSpeed;
-        forceUppercase = _forceUppercase;
-
-        if (_onFinishExecution != null)
-            FinishExecution += _onFinishExecution;
-        if (_keyboardCallback != null)
-            KeyboardCallback += _keyboardCallback;
-
-        UpdateText();
-        Application.quitting += () =>
-        {
-            canceled = true;
-        };
-    }
-
-    /// <summary>
     /// Changes the target text to the given string.
     /// Special Chars:
     /// ☑[key|queue] Opens the Keyboard. The callback will be in the format "key|Input". The same key that is put in will come out.
@@ -81,7 +54,19 @@ public class TextTyper
     /// <param name="text">The given string.</param>
     public void SetText(string text)
     {
-        curText = forceUppercase ? text.ToUpper() : text;
+        curText = text;
+    }
+
+    /// <summary>
+    /// Changes the target text to the given string.
+    /// </summary>
+    /// <param name="text">The given string.</param>
+    /// <param name="duration">Time before this message is Cleared.</param>
+    public async void SetText(string text, float duration)
+    {
+        curText = text;
+        await Task.Delay((int)(duration * 1000));
+        Clear();
     }
 
     async void UpdateText()
@@ -158,7 +143,6 @@ public class TextTyper
         FinishExecution?.Invoke();
     }
 
-
     async Task<Task> InstantiateKeyboard(string question)
     {
         SceneManager.LoadScene("Keyboard", LoadSceneMode.Additive);
@@ -168,5 +152,11 @@ public class TextTyper
         Keyboard.Reference.ConfirmEvent += KeyboardCallback;
         curText = string.Empty;
         return Task.CompletedTask;
+    }
+
+    public void Clear()
+    {
+        curText = string.Empty;
+        target.text = string.Empty;
     }
 }

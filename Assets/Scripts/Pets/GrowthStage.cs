@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor.Animations;
 using System;
+using TMPro;
 
 [Serializable]
 public class GrowthStage
@@ -16,6 +17,8 @@ public class GrowthStage
     public AnimatorController Animator;
     public List<GrowthTransition> Transitions = new List<GrowthTransition>();
     public PetStats DefaultStats;
+    public TMP_FontAsset ChatFont;
+    public List<Message> Messages = new List<Message>() { Message.defaultChat, Message.defaultHunger };
 
     public GrowthStage()
     {

@@ -184,6 +184,8 @@ public class EvolutionEditor : EditorWindow
             GUILayout.Height(EditorGUIUtility.singleLineHeight));
         EditorGUILayout.PropertyField(stage.FindPropertyRelative(nameof(GrowthStage.Animator)), new GUIContent("Animator"));
         EditorGUILayout.PropertyField(stage.FindPropertyRelative(nameof(GrowthStage.DefaultStats)), new GUIContent("Default Stats"));
+        EditorGUILayout.PropertyField(stage.FindPropertyRelative(nameof(GrowthStage.ChatFont)), new GUIContent("Chat Font", "null = default"));
+        EditorGUILayout.PropertyField(stage.FindPropertyRelative(nameof(GrowthStage.Messages)), new GUIContent("Messages"));
 
         GUILayout.BeginHorizontal();
         if (GUILayout.Button("Create Transition"))

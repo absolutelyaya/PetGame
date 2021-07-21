@@ -80,7 +80,7 @@ public class Keyboard : MonoBehaviour
     public void SetQuestion(string question)
     {
         Question.text = string.Empty;
-        var tt = new TextTyper(Question, 16, true);
+        var tt = new TextTyper(Question, 16);
         key = question.Split('|')[0];
         tt.SetText(question.Split('|')[1] + '\u23F9');
     }

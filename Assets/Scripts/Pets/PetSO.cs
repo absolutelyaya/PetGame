@@ -16,6 +16,6 @@ public class PetSO : ScriptableObject
             if (stage.ID == ID)
                 return stage;
         }
-        throw new ArgumentException($"no stage with the ID '{ID}' found in EvolutionTree {name}");
+        throw new ArgumentException($"No stage with the ID '{ID}' found in EvolutionTree {name}");
     }
 }
