@@ -23,17 +23,23 @@ public class PetEntity : MonoBehaviour
         render = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         speechBubble = GetComponentInChildren<SpeechBubble>();
-        stage = EvolutionTree.GetStageByID(StageID);
-        if(stage != null)
+        UpdateEvolutionState(StageID);
+        StartCoroutine(MovementRoutine());
+        StartCoroutine(ChatRoutine());
+    }
+
+    void UpdateEvolutionState(string newStageID)
+    {
+        stage = EvolutionTree.GetStageByID(StageID = newStageID);
+        if (stage != null)
         {
             anim.runtimeAnimatorController = stage.Animator;
             Stats = stage.DefaultStats;
             messages = stage.Messages;
             if (stage.ChatFont != null)
                 speechBubble.SetFont(stage.ChatFont);
+            speechBubble.CreateTextTyper(Stats.SpeakSpeed);
         }
-        StartCoroutine(MovementRoutine());
-        StartCoroutine(ChatRoutine());
     }
 
     IEnumerator MovementRoutine()
