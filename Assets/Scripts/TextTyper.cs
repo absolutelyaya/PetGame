@@ -159,4 +159,10 @@ public class TextTyper
         curText = string.Empty;
         target.text = string.Empty;
     }
+
+    public void Destroy()
+    {
+        Clear();
+        canceled = true;
+    }
 }

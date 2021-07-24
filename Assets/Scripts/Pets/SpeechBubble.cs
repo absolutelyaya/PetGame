@@ -14,8 +14,14 @@ public class SpeechBubble : MonoBehaviour
     {
         canvas = GetComponent<Canvas>();
         text = GetComponentInChildren<TextMeshProUGUI>();
+    }
+
+    public void CreateTextTyper(int typeSpeed)
+    {
+        if (tt != null)
+            tt.Destroy();
         if (text != null)
-            tt = new TextTyper(text, 20);
+            tt = new TextTyper(text, typeSpeed);
     }
 
     private void Update()
