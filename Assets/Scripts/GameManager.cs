@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     readonly Dictionary<string, EggSO> allEggs = new Dictionary<string, EggSO>();
     readonly Dictionary<string, PetSO> allPets = new Dictionary<string, PetSO>();
     readonly Dictionary<string, AdoptionPlaceSO> allAdoptionPlaces = new Dictionary<string, AdoptionPlaceSO>();
+    readonly Dictionary<string, ItemSO> allItems = new Dictionary<string, ItemSO>();
 
     private void Start()
     {
@@ -59,6 +60,8 @@ public class GameManager : MonoBehaviour
                 allPets.Add(item.name, pet);
             if (item is EggSO egg && !allEggs.ContainsKey(item.name))
                 allEggs.Add(item.name, egg);
+            if (item is ItemSO i && !allItems.ContainsKey(item.name))
+                allItems.Add(item.name, i);
         }
     }
 
@@ -77,6 +80,10 @@ public class GameManager : MonoBehaviour
             case "EggSO":
                 if (allEggs.TryGetValue(name, out EggSO egg))
                     return egg;
+                break;
+            case "ItemSO":
+                if (allItems.TryGetValue(name, out ItemSO item))
+                    return item;
                 break;
             default:
                 break;
