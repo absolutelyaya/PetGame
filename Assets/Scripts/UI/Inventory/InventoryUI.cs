@@ -21,6 +21,8 @@ public class InventoryUI : MonoBehaviour
     public enum InventoryCategory
     {
         None,
-        Food
+        Food,
+        Placeholder1,
+        Placeholder2
     }
 }

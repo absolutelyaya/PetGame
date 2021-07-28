@@ -14,6 +14,9 @@ TextureImporter:
   - first:
       213: 141063693582682956
     second: Inventory
+  - first:
+      213: 3567876534770325076
+    second: Inventory.Arrow
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -206,8 +209,8 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1
-        width: 64
+        y: 0
+        width: 42
         height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -218,6 +221,27 @@ TextureImporter:
       bones: []
       spriteID: c4b43b29ea825f100800000000000000
       internalID: 141063693582682956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Inventory.Arrow
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 13
+        width: 4
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 456df611ec4a38130800000000000000
+      internalID: 3567876534770325076
       vertices: []
       indices: 
       edges: []
