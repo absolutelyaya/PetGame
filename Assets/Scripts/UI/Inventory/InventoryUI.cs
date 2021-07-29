@@ -6,6 +6,7 @@ using System;
 public class InventoryUI : MonoBehaviour
 {
     public Action<InventoryCategory> ChangeCategoryEvent;
+    public List<ItemSlot> Slots = new List<ItemSlot>();
 
     InventoryCategory curCategory = InventoryCategory.None;
 
@@ -16,6 +17,12 @@ public class InventoryUI : MonoBehaviour
         else
             curCategory = InventoryCategory.None;
         ChangeCategoryEvent?.Invoke(curCategory);
+
+        List<ItemStack> Items = GameManager.Reference.Inventory.GetItems(curCategory);
+        for (int i = 0; i < Slots.Count; i++)
+        {
+            Slots[i].SetItem(i < Items.Count ? Items[i] : null);
+        }
     }
 
     public enum InventoryCategory

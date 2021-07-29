@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using System.Linq;
 
 [DefaultExecutionOrder(-666)]
 public class GameManager : MonoBehaviour
@@ -12,6 +13,7 @@ public class GameManager : MonoBehaviour
     public EggSO OwnedEgg;
     public List<EggSO> PreviouslyOwnedEggs;
     public PetSO OwnedPet;
+    public Inventory Inventory;
 
     readonly Dictionary<string, EggSO> allEggs = new Dictionary<string, EggSO>();
     readonly Dictionary<string, PetSO> allPets = new Dictionary<string, PetSO>();
@@ -30,6 +32,7 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
             data = SaveSystem.LoadData();
             FetchScriptableObjects();
+            Inventory = new Inventory(true);
             //LoadModSOs
             if (data.OwnedEggID != null && data.OwnedEggID.Length > 0)
                 OwnedEgg = (EggSO)GetSOByName<EggSO>(data.OwnedEggID);
@@ -89,6 +92,18 @@ public class GameManager : MonoBehaviour
                 break;
         }
         throw new Exception($"Scriptable Object of type {typeof(Type)} named {name} not found!");
+    }
+
+    public List<ScriptableObject> GetSOsOfType(Type type)
+    {
+        return type.ToString() switch
+        {
+            "AdoptionPlaceSO" => allAdoptionPlaces.Values.ToList<ScriptableObject>(),
+            "PetSO" => allPets.Values.ToList<ScriptableObject>(),
+            "EggSO" => allEggs.Values.ToList<ScriptableObject>(),
+            "ItemSO" => allItems.Values.ToList<ScriptableObject>(),
+            _ => null,
+        };
     }
 
     public bool WasPreviouslyOwned(string name)

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aba40c635f25c0649890069871942911, type: 3}
   m_Name: Groceries
   m_EditorClassIdentifier: 
-  Type: 0
+  Category: 1
   Icon: {fileID: 4337684191699249041, guid: b99311a1f02a88d4cb8ce0c12a11752f, type: 3}
   Description: 
