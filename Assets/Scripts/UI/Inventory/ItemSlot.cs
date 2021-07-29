@@ -28,13 +28,16 @@ public class ItemSlot : MonoBehaviour
         frame = GetComponent<Image>();
         owner = GetComponentInParent<InventoryUI>();
         owner.ChangeCategoryEvent += (c) => Selected = false;
+        owner.InspectSlotEvent += (s) => Selected = s == this;
     }
 
     public void OnPressed()
     {
         if(item != null)
+        {
             Selected = !Selected;
-        ///TODO: Inspect item
+            owner.InspectItemStack(Selected ? this : null);
+        }
     }
 
     public void SetItem(ItemStack stack)
@@ -43,9 +46,15 @@ public class ItemSlot : MonoBehaviour
         if (stack != null)
         {
             item = stack;
+            ItemIcon.sprite = stack.Template.Icon;
             ItemIcon.enabled = true;
         }
         else
             ItemIcon.enabled = false;
+    }
+
+    public ItemStack GetItemStack()
+    {
+        return item;
     }
 }
