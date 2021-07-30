@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Inventory
 {
+    public Action InventoryUpdateEvent;
     readonly List<ItemStack> Items = new List<ItemStack>();
 
     public Inventory(bool debug)
@@ -32,6 +34,21 @@ public class Inventory
             stack.Count += count;
         else
             Items.Add(new ItemStack((ItemSO)GameManager.Reference.GetSOByName<ItemSO>(itemName), count));
+        InventoryUpdateEvent?.Invoke();
+    }
+
+    public bool RemoveItem(string itemName, int count)
+    {
+        var stack = GetStackByName(itemName);
+        if (stack != null && stack.Count >= count)
+        {
+            stack.Count -= count;
+            if (stack.Count <= 0)
+                Items.Remove(stack);
+            InventoryUpdateEvent?.Invoke();
+            return true;
+        }
+        return false;
     }
 
     public List<ItemStack> GetItems(InventoryUI.InventoryCategory category)
@@ -46,10 +63,9 @@ public class Inventory
         }
         return validItems;
     }
-
-    ///TODO: Inspector Logic
 }
 
+[Serializable]
 public class ItemStack
 {
     public ItemSO Template;

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aba40c635f25c0649890069871942911, type: 3}
-  m_Name: Groceries
+  m_Name: Placeholder2
   m_EditorClassIdentifier: 
-  Category: 1
-  Icon: {fileID: 4337684191699249041, guid: b99311a1f02a88d4cb8ce0c12a11752f, type: 3}
-  Description: 'Some fresh Groceries.
+  Category: 3
+  Icon: {fileID: -488721925442295091, guid: b99311a1f02a88d4cb8ce0c12a11752f, type: 3}
+  Description: 'Oh look!
 
-    Pretty ordinary Food'
+    A perfectly generic Item.'

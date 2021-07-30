@@ -36,7 +36,7 @@ public class ItemSlot : MonoBehaviour
         if(item != null)
         {
             Selected = !Selected;
-            owner.InspectItemStack(Selected ? this : null);
+            owner.InspectSlot(Selected ? this : null);
         }
     }
 

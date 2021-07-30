@@ -10,6 +10,7 @@ public class PetEntity : MonoBehaviour
     public string StageID;
     public PetStats Stats;
 
+    ItemDrop target;
     Vector2 destination;
     Animator anim;
     GrowthStage stage;
@@ -17,6 +18,7 @@ public class PetEntity : MonoBehaviour
     SpeechBubble speechBubble;
     List<Message> messages;
     public Message.MessageType ChatMode;
+    public List<ItemStack> FoodHistory = new List<ItemStack>();
 
     void Start()
     {
@@ -26,6 +28,7 @@ public class PetEntity : MonoBehaviour
         UpdateEvolutionState(StageID);
         StartCoroutine(MovementRoutine());
         StartCoroutine(ChatRoutine());
+        ItemDrop.OnConsumeEvent += OnConsumeFood;
     }
 
     void UpdateEvolutionState(string newStageID)
@@ -46,6 +49,12 @@ public class PetEntity : MonoBehaviour
     {
         while(true)
         {
+            Collider2D c = Physics2D.OverlapCircle(transform.position, 10, LayerMask.GetMask("Items"));
+            if (c != null)
+            {
+                target = c.GetComponent<ItemDrop>();
+                destination = target.transform.position;
+            }
             while (Vector2.Distance(transform.position, destination) > 1 * Time.fixedDeltaTime * Stats.Speed)
             {
                 Vector3 direction = ((Vector3)destination - transform.position).normalized;
@@ -55,10 +64,28 @@ public class PetEntity : MonoBehaviour
                 yield return new WaitForFixedUpdate();
             }
             anim.SetBool("moving", false);
+            while (target != null)
+            {
+                target.Damage();
+                yield return new WaitForSeconds(1); //maybe replace 1 by consumptionspeed?
+            }
             yield return new WaitForSeconds(Random.Range(Stats.MoveInterval.x, Stats.MoveInterval.y));
             destination = new Vector2(Random.Range(-3f, 3f), Random.Range(-2f, 2f));
             yield return new WaitForEndOfFrame();
         }
+    }
+
+    public void OnConsumeFood(ItemSO template)
+    {
+        foreach (var item in FoodHistory)
+        {
+            if (item.Template == template)
+            {
+                item.Count++;
+                return;
+            }
+        }
+        FoodHistory.Add(new ItemStack(template, 1));
     }
 
     IEnumerator ChatRoutine()

@@ -1426,7 +1426,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1436,21 +1436,33 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: -5604920543791102885, guid: e33a81b0bfeac2643b95714baebf3f8f, type: 3}
+    m_PressedSprite: {fileID: -5280726875750141052, guid: e33a81b0bfeac2643b95714baebf3f8f, type: 3}
+    m_SelectedSprite: {fileID: -5604920543791102885, guid: e33a81b0bfeac2643b95714baebf3f8f, type: 3}
+    m_DisabledSprite: {fileID: 6112630769584023636, guid: e33a81b0bfeac2643b95714baebf3f8f, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 657797520}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1647172526}
+        m_TargetAssemblyTypeName: InventoryUI, Assembly-CSharp
+        m_MethodName: OnAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &657797520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3112,7 +3124,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 8636045336481829144, guid: c478159f0fe22644b8949081256170c6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3445,6 +3457,7 @@ MonoBehaviour:
   ItemCount: {fileID: 826693962}
   ActionButton: {fileID: 657797519}
   ActionLabel: {fileID: 647753276}
+  ItemPrefab: {fileID: 1667889598347873652, guid: efbb2808716d8764bb37c3c771fad24d, type: 3}
 --- !u!1 &1659491905
 GameObject:
   m_ObjectHideFlags: 0
@@ -3537,7 +3550,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 23
+    m_Bits: 87
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0

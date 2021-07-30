@@ -23,6 +23,15 @@ TextureImporter:
   - first:
       213: -4910467378755017893
     second: Inventory.Divider
+  - first:
+      213: -5604920543791102885
+    second: Inventory_ButtonHighlight
+  - first:
+      213: 6112630769584023636
+    second: Inventory_ButtonDisabled
+  - first:
+      213: -5280726875750141052
+    second: Inventory_ButtonPressed
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -193,13 +202,13 @@ TextureImporter:
       name: Inventory.Button
       rect:
         serializedVersion: 2
-        x: 42
-        y: 46
-        width: 22
-        height: 11
+        x: 43
+        y: 56
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 3, y: 2, z: 2, w: 2}
+      border: {x: 2, y: 2, z: 2, w: 2}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -290,6 +299,69 @@ TextureImporter:
       bones: []
       spriteID: b53e9209fe38adbb0800000000000000
       internalID: -4910467378755017893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Inventory_ButtonHighlight
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 2, y: 2, z: 2, w: 2}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b54ca0926725732b0800000000000000
+      internalID: -5604920543791102885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Inventory_ButtonDisabled
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 48
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 2, y: 2, z: 2, w: 2}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 458ad208c4d64d450800000000000000
+      internalID: 6112630769584023636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Inventory_ButtonPressed
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 48
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 2, y: 2, z: 2, w: 2}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 483fd0f82e617b6b0800000000000000
+      internalID: -5280726875750141052
       vertices: []
       indices: 
       edges: []
