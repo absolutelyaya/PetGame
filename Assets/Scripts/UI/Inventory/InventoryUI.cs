@@ -87,7 +87,8 @@ public class InventoryUI : MonoBehaviour
 
     public void OnAction()
     {
-        if (GameManager.Reference.Inventory.RemoveItem(InspectorSlot.GetItemStack().Template.name, 1))
+        var template = InspectorSlot.GetItemStack().Template;
+        if (GameManager.Reference.Inventory.RemoveItem(template.name, 1))
         {
             switch (curCategory)
             {
@@ -101,13 +102,13 @@ public class InventoryUI : MonoBehaviour
                 default:
                     break;
             }
-            ThrowItem(InspectorSlot.GetItemStack().Template);
+            ThrowItem(template);
         }
     }
 
     public void ThrowItem(ItemSO template)
     {
-        var item = Instantiate(ItemPrefab).GetComponent<ItemDrop>();
+        var item = Instantiate(ItemPrefab, new Vector2(UnityEngine.Random.Range(-5f, 5f) + 5.375f, UnityEngine.Random.Range(-2f, 2f)), Quaternion.identity).GetComponentInChildren<ItemDrop>();
         item.Initiate(template);
     }
 

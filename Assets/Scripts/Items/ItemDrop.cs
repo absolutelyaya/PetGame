@@ -18,6 +18,9 @@ public class ItemDrop : MonoBehaviour
     {
         OnLandEvent?.Invoke(this);
         GetComponent<Collider2D>().enabled = true;
+        Transform root = transform.parent;
+        transform.parent = null;
+        Destroy(root.gameObject);
     }
 
     public void Initiate(ItemSO _template)

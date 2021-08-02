@@ -3159,6 +3159,7 @@ MonoBehaviour:
     HungerRate: 0.1
     HungerThreshold: 1
   ChatMode: 0
+  FoodHistory: []
 --- !u!95 &1569207101
 Animator:
   serializedVersion: 3
@@ -3457,7 +3458,7 @@ MonoBehaviour:
   ItemCount: {fileID: 826693962}
   ActionButton: {fileID: 657797519}
   ActionLabel: {fileID: 647753276}
-  ItemPrefab: {fileID: 1667889598347873652, guid: efbb2808716d8764bb37c3c771fad24d, type: 3}
+  ItemPrefab: {fileID: 2221856807226641004, guid: 46fb9f469f086594c8bb79fd488b7cea, type: 3}
 --- !u!1 &1659491905
 GameObject:
   m_ObjectHideFlags: 0
