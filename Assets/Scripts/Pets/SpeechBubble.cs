@@ -26,6 +26,7 @@ public class SpeechBubble : MonoBehaviour
 
     private void Update()
     {
+        transform.position = new Vector3(Mathf.Round(transform.position.x * 16) / 16, Mathf.Round(transform.position.y * 16) / 16, transform.position.z);
         canvas.enabled = text.text.Length > 0;
     }
 

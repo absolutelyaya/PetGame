@@ -9,6 +9,7 @@ public class InventoryUI : MonoBehaviour
 {
     public Action<InventoryCategory> ChangeCategoryEvent;
     public Action<ItemSlot> InspectSlotEvent;
+    public GameObject InventoryContainer;
     public List<ItemSlot> Slots = new List<ItemSlot>();
     [Header("Inspector")]
     public ItemSlot InspectorSlot;
@@ -27,13 +28,21 @@ public class InventoryUI : MonoBehaviour
         GameManager.Reference.Inventory.InventoryUpdateEvent += UpdateInventory;
     }
 
+    public void OpenInventory()
+    {
+        InventoryContainer.SetActive(true);
+        SelectCategory(InventoryCategory.Food);
+    }
+
     public void SelectCategory(InventoryCategory category)
     {
         InspectSlot(null);
-        if (category != curCategory)
-            curCategory = category;
-        else
-            curCategory = InventoryCategory.None;
+        if (category == InventoryCategory.None)
+        {
+            InventoryContainer.SetActive(false);
+            return;
+        }
+        curCategory = category;
         ChangeCategoryEvent?.Invoke(curCategory);
 
         UpdateInventory();
@@ -53,7 +62,7 @@ public class InventoryUI : MonoBehaviour
             InventoryCategory.Placeholder2 => "???",
             _ => ""
         };
-        InspectSlot(InspectorSlot);
+        InspectSlot(InspectorSlot.GetItemStack() == null ? null : InspectorSlot);
     }
 
     public void InspectSlot(ItemSlot slot)

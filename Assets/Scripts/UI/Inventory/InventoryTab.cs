@@ -28,6 +28,8 @@ public class InventoryTab : MonoBehaviour
         img = GetComponent<Image>();
         owner = GetComponentInParent<InventoryUI>();
         owner.ChangeCategoryEvent += (c) => Selected = c == Category;
+        if (Category == InventoryUI.InventoryCategory.Food)
+            Selected = true;
     }
 
     public void OnPressed()
