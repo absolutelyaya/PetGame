@@ -38,15 +38,19 @@ MonoBehaviour:
       Speed: 0
       MoveInterval: {x: 0, y: 0}
       SpeakInterval: {x: 45, y: 60}
+      SpeakSpeed: 16
+      StomachSize: 10
+      HungerRate: 0.1
+      HungerThreshold: 1
     ChatFont: {fileID: 0}
     Messages: []
   - ID: c40cf37e-5594-48aa-b52f-ff2c331d14a6
     Display:
       serializedVersion: 2
-      x: -23.666666
-      y: 186.5
-      width: 48
-      height: 27
+      x: -26.666666
+      y: 185
+      width: 54
+      height: 30
     Depth: 1
     Icon: {fileID: -8975250943914533070, guid: c478159f0fe22644b8949081256170c6, type: 3}
     Animator: {fileID: 9100000, guid: 05d302722dd91104d9acef7d855cc8cb, type: 2}
@@ -60,6 +64,10 @@ MonoBehaviour:
       Speed: 6
       MoveInterval: {x: 1.5, y: 3}
       SpeakInterval: {x: 45, y: 60}
+      SpeakSpeed: 16
+      StomachSize: 10
+      HungerRate: 0.1
+      HungerThreshold: 1
     ChatFont: {fileID: 0}
     Messages: []
   - ID: 754794ae-1a8b-4622-95e0-c5d929dcfbe8
@@ -82,15 +90,19 @@ MonoBehaviour:
       Speed: 6
       MoveInterval: {x: 1.5, y: 3}
       SpeakInterval: {x: 45, y: 60}
+      SpeakSpeed: 16
+      StomachSize: 10
+      HungerRate: 0.1
+      HungerThreshold: 1
     ChatFont: {fileID: 0}
     Messages: []
   - ID: 0171131e-b703-400c-b6b7-8fc2f7c21300
     Display:
       serializedVersion: 2
-      x: -38.666664
-      y: 332
-      width: 78
-      height: 36
+      x: -41.666664
+      y: 329
+      width: 84
+      height: 42
     Depth: 2
     Icon: {fileID: -8145321424125516464, guid: c478159f0fe22644b8949081256170c6, type: 3}
     Animator: {fileID: 9100000, guid: 365eb32bc9a3c88458e4b5ff22d1508b, type: 2}
@@ -103,11 +115,19 @@ MonoBehaviour:
     DefaultStats:
       Speed: 1
       MoveInterval: {x: 4.5, y: 6}
-      SpeakInterval: {x: 45, y: 60}
+      SpeakInterval: {x: 2, y: 4}
+      SpeakSpeed: 16
+      StomachSize: 10
+      HungerRate: 0.1
+      HungerThreshold: 1
     ChatFont: {fileID: 0}
     Messages:
     - Type: 0
       Text: "  \xFC  "
+      Weight: 1
+      Duration: 5
+    - Type: 0
+      Text: ayayayayayayayaya
       Weight: 1
       Duration: 5
     - Type: 1
@@ -134,6 +154,10 @@ MonoBehaviour:
       Speed: 6
       MoveInterval: {x: 1.5, y: 3}
       SpeakInterval: {x: 45, y: 60}
+      SpeakSpeed: 16
+      StomachSize: 10
+      HungerRate: 0.1
+      HungerThreshold: 1
     ChatFont: {fileID: 0}
     Messages: []
   - ID: 457a24ee-54be-4070-8d30-a3d68c233386
@@ -151,6 +175,10 @@ MonoBehaviour:
       Speed: 6
       MoveInterval: {x: 1.5, y: 3}
       SpeakInterval: {x: 45, y: 60}
+      SpeakSpeed: 16
+      StomachSize: 10
+      HungerRate: 0.1
+      HungerThreshold: 1
     ChatFont: {fileID: 0}
     Messages: []
   - ID: 829bb076-eed2-41e3-a827-7149d4cf36f3
@@ -168,6 +196,10 @@ MonoBehaviour:
       Speed: 6
       MoveInterval: {x: 1.5, y: 3}
       SpeakInterval: {x: 45, y: 60}
+      SpeakSpeed: 16
+      StomachSize: 10
+      HungerRate: 0.1
+      HungerThreshold: 1
     ChatFont: {fileID: 0}
     Messages: []
   InitialStage:
@@ -198,5 +230,9 @@ MonoBehaviour:
       Speed: 6
       MoveInterval: {x: 1.5, y: 3}
       SpeakInterval: {x: 45, y: 60}
+      SpeakSpeed: 16
+      StomachSize: 10
+      HungerRate: 0.1
+      HungerThreshold: 1
     ChatFont: {fileID: 0}
     Messages: []

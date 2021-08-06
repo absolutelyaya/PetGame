@@ -9,9 +9,11 @@ public class SpeechBubble : MonoBehaviour
     Canvas canvas;
     TextMeshProUGUI text;
     TextTyper tt;
+    Vector3 localPos;
 
     private void Start()
     {
+        localPos = transform.localPosition;
         canvas = GetComponent<Canvas>();
         text = GetComponentInChildren<TextMeshProUGUI>();
     }
@@ -26,6 +28,7 @@ public class SpeechBubble : MonoBehaviour
 
     private void Update()
     {
+        transform.localPosition = localPos;
         transform.position = new Vector3(Mathf.Round(transform.position.x * 16) / 16, Mathf.Round(transform.position.y * 16) / 16, transform.position.z);
         canvas.enabled = text.text.Length > 0;
     }
